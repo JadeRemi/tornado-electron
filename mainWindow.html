@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Some random app</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    
+</head>
+<body>
+    <div class="main-container grey lighten-2">
+        <div class="list-container container center flow-text z-depth-1">
+            <ul class="list" id="item-list">
+            </ul>
+        </div>
+        <div class="footer-info card">
+            <span>Items received:&nbsp;</span> 
+            <span id="item-count">0</span>
+        </div>
+        <div class="fixed-action-btn">
+            <a class="btn  waves-effect white black-text" id="getItemsButton">
+                Get Data
+                <i class="material-icons right">arrow_downward</i>
+            </a>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/mainWindow.js"></script>
+</body>
+</html>
