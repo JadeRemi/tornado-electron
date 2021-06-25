@@ -1,0 +1,20 @@
+{
+  "name": "tornado-electron",
+  "version": "1.0.0",
+  "description": "A simple electron + tornado server app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "setup": "pip install pyinstaller && pip install tornado",
+    "package-mac": "npm run setup && pyinstaller server.py --distpath pydist && rm -rf build && rm server.spec && electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "npm run setup && pyinstaller server.py --distpath pydist && rd /s /q __pycache__ && rd /s /q build && del /q server.spec && electron-packager . electron-tornado-app --overwrite  --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron + Tornado App\"",
+    "package-linux": "npm run setup && pyinstaller server.py --distpath pydist && rm -rf build && rm server.spec && electron-packager . electron-tornado-app --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
+  },
+  "author": "JadeRemi",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^9.3.0",
+    "electron-packager": "^14.2.1"
+  }
+}
