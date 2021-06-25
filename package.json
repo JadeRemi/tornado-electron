@@ -1,7 +1,7 @@
 {
-  "name": "electron_tornado_app",
+  "name": "tornado-electron",
   "version": "1.0.0",
-  "description": "A simple electron + tornado server app 🙂",
+  "description": "A simple electron + tornado server app",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
